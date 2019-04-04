@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- No es obligatorio que lleve el atributo lang, pero es muy recomendable para la accesibilidad (ayudará en la entonación al ser leída c) y para el SearchingEngineOptimization o posicionamiento web. Muchas de las características que mejoran accesibilidad mejoran SEO. El no poner el atributo lang nos produce un warning, pero no un error. -->
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--Esta línea lo que indica es a los navegadores de Microsoft que no emulen nada y que traten de ser lo más posibles parecidos a Edge-->
@@ -10,12 +10,13 @@
             p {color: brown}
         </style> -->
 
-        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <!-- <link rel="stylesheet" href="reset.css"> Este enlace a esta hoja de estilo sirve para resetear los estilos y a partir de ello lo que venga a continuación no deja al navegador poner los estilos de manera predeterminada, por lo tanto, nos da más control sobre el resto de funciones-->
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
             <h1>Hola Mundo bien hecho</h1>
-            <p>Esto es un texto en español</p>
-            desde España
+            <p>Esto es un texto en <a href="http://www.rae.es/">español</a></p>
+            <img src="./assets/SU4x7.jpg" alt="Avión ruso SU-47 Berkut sobrevolando paraje de Siberia"> <!-- src establece dónde está la imagen y con ./ se nos despliega la estructura de carpetas para que veamos dónde está nuestro fichero sin riesgo a equivocarnos con las letras. El atributo alt es el texto alternativo que describe la imagen cuando falta la imagen por el motivo que sea, y ayuda con la accesibilidad, con el SEO para el buscador de imágenes. -->
             <p>Lorem ipsum <strong>dolor</strong> <!--con strong conseguimos que Google interprete que dolor es el tema de la página y ello hace que aparezca así cuando se busca en Google--> , sit amet consectetur adipisicing elit. Deserunt, cum. At consectetur dolor modi labore nesciunt dicta quos ipsa iure sunt hic, ex, ratione aspernatur. Dolore adipisci culpa architecto tempore?</p> <!--con "p*4>lorem" y pulsando enter conseguimos que emmet nos haga 4 párrafos porque los conseguimos multiplicando y con ello nos generan 4 o el nº que sea de líneas "lorem ipsum" sin repetición-->
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <em>Ad rerum</em> non tempora nobis, suscipit, quo velit libero, voluptates hic labore ab praesentium nostrum aperiam dolore cumque ipsa! Consequatur, totam nesciunt!</p>
             <p>Alias nobis libero quidem, sint optio rem dolore facere quo a quos placeat id magni perspiciatis quibusdam suscipit commodi non quas aliquam quasi aliquid repellat quia iusto accusamus minima? Sequi.</p>
@@ -23,6 +24,3 @@
             <p>Doloremque, tempora commodi. Aliquid, inventore fuga dolorem blanditiis tempore ipsa eaque expedita at omnis earum eos. Error ipsa asperiores fugiat necessitatibus iusto impedit ducimus velit saepe sint eum! Fugit, dolore.</p>
     </body>
 </html>
-
-    
-.

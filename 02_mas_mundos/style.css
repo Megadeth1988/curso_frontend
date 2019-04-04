@@ -1,0 +1,7 @@
+body {
+    background-color: cornsilk;
+} /* Esto es para aplicar a todo lo que va dentro de la etiqueta body */
+
+img {
+    width: 50%;
+} /* Esto es para aplicar a todas las imágenes */
