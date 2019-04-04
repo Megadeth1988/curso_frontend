@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aitor Gajardo">
+    <meta name="description" content="Ejercicios del curso Web FrontEnd">
+    <meta name="keywords" content="web, HTML, desarrollo front"> <!-- Tienen importancia, pero no trascendental, en los buscadores. Antes se les podía engañar, pero ahora a Google no se le puede engañar porque con sus algoritmos de SEO ve si coinciden las palabras clave con el resto de la página -->
+    <meta name="generator" content="Visual Studio Code"> <!-- Suele ser donde le indicamos el tipo de programa que hemos usado para generar nuestra web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Este es un formato de metadato que ya no se utiliza (el formato al que me refiero es http-equiv) -->
+    <title>Elementos</title>
+    <!-- <style></style> puede ir aquí aunque no es recomendable -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        console.log('Hola Mundo')
+    </script> <!-- Esto nos sirve para escribir JS -->
+    <script src="./js/app.js"></script> <!-- Una vez que un script tiene un src ignora lo que hay entre las etiquetas de apertura y de cierre -->
+</head>
+<body>
+    <header> <!-- Nos permite definir mucho mejor la estructura de nuestra web -->
+        <h1>Elementos de HTML</h1>
+        <nav>Documentos - Metadatos - Bloques</nav>
+    </header>
+    <section>
+        <header>
+            <h2>El documento</h2>
+        </header>
+        <p>html</p>
+    </section>
+    <section>
+        <header>
+            <h2>Metadatos</h2>
+        </header>
+        <p>head, meta, title, link, style y script</p>
+    </section>
+    <section>
+        <header>
+            <h2>Elementos en bloque</h2>
+        </header>
+            <h3>Section</h3> <!-- Elementos de bloque. Son aquellos elementos que se reflejan en el esquema de la página -->
+                <p>Antes de HMTL5: body, los encabezados (h1...h6) daba lugar al seccionado implícito</p>
+                <p>En HTML5 aparecen los elementos de seccionado explícito: para eso tengo las etiquetas section, header, footer, nav, article y aside</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolores impedit quaerat dolore magni repellendus incidunt quasi repellat, nemo, itaque velit cum adipisci. At quod dolore hic eveniet deserunt voluptates.</p>
+                <p>Illo ipsum provident doloribus expedita eum? Dolor, laboriosam! Quaerat veniam ratione quisquam maxime ducimus necessitatibus minima ut magnam deleniti ipsa inventore tenetur, soluta cum rem! Nemo cum numquam qui a?</p>
+            <h3>Grouping</h3> <!-- Elemento de bloque. No se reflejan en el índice porque son párrafos o listas, etc. -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, voluptatem laboriosam eaque cupiditate nisi, debitis repellat iste esse similique autem quia fuga consequuntur aliquam animi quibusdam magnam vitae. Natus, laborum.</p>
+                <p>Quas sunt fugiat hic mollitia unde quidem rerum facilis aliquam vero repellendus sed voluptate eligendi provident nam voluptatum dolores non cumque, eos libero dolore maiores culpa nostrum. Corrupti, enim ab.</p>
+                <p>Aliquid harum consectetur illum, odit numquam repellat quis. Voluptate a officia, sunt debitis eveniet ipsa, qui odit nam enim beatae voluptatibus culpa perferendis non doloribus aspernatur vel? Doloremque, voluptatum vero.</p> <!-- Todo esto establece una serie de jerarquías padre-hijo que consigue que los navegadores y los lectores de pantalla entiendan esta estructura gracias a los h -->
+    </section>
+    <footer>
+        <p>Aitor Gajardo</p>
+    </footer>
+</body>
+</html>
