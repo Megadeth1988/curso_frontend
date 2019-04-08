@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Este es un formato de metadato que ya no se utiliza (el formato al que me refiero es http-equiv) -->
-    <title>Elementos</title>
+    <title>Home - Curso</title>
     <!-- Es requisito indispensable que cualquier documento HTML tenga title, porque si no, no nos validará la web -->
     <!-- <style></style> puede ir aquí aunque no es recomendable -->
     <link rel="stylesheet" href="./css/style.css">
@@ -27,7 +27,14 @@
     <header>
         <!-- Nos permite definir mucho mejor la estructura de nuestra web -->
         <h1>Elementos de HTML ☢️αβγ</h1> <!-- Se pintan bien porque usan UNICODE -->
-        <nav>Documentos - Metadatos - Bloques</nav>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li> <!-- Esto hace que no haga nada y se quede donde estamos sin recargar la página -->
+                <li><a href="#bloques">En bloque</a></li>
+                <li><a href="#en_linea">En línea</a></li>
+                <li><a href="./mmedia.html">Multimedia</a></li> <!-- La mejor manera de enlazar cuando se hacen páginas web son las referencias relativas al documento. Así, movamos a donde movamos nuestra web mientras mantengamos nuestra estructura de carpetas interna nos servirá. -->
+            </ul>
+        </nav>
     </header>
     <div class="content-wrapper"> <!-- content-wrapper significa literalmente envoltorio del contenedor -->
         <section>
@@ -50,7 +57,7 @@
                 <li>script</li>
             </ul>
         </section>
-        <section>
+        <section id="bloques">
             <header>
                 <h2>Elementos en bloque</h2>
             </header>
@@ -195,7 +202,7 @@
                 <!-- Todo esto establece una serie de jerarquías padre-hijo que consigue que los navegadores y los lectores de pantalla entiendan esta estructura gracias a las etiquetas h -->
             </section>
         </section>
-        <section>
+        <section id="en_linea">
             <header>
               <h2>Elementos en línea</h2>
             </header>
