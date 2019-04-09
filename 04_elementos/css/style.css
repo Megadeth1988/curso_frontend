@@ -1,3 +1,7 @@
+body {
+    background-color: orange; 
+}
+
 .h1 {
     font-size: 2em;
     margin-block-start: 0.67em;
@@ -14,4 +18,17 @@
 
 .verde {
     color: darkgreen;
+}
+
+img, embed {
+    width: 45%;
+} /* Con esto hacemos que la imagen ocupe toda la página y que dependiendo de cómo sea nuestra ventana, la imagen se adapte manteniendo la relación de aspecto o ratio */
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+video {
+    width: 100%;
 }

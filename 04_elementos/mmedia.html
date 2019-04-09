@@ -38,11 +38,86 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <header>
-            <h2>Multimedia</h2>
-        </header>
-    </section>
+    <div class="content-wrapper">
+        <main>
+            <section>
+                <header>
+                    <h2>Elementos embebidos multimedia</h2>
+                </header>
+                <p>Veremos cómo utilizar:</p>
+                <ul>
+                    <li>Imágenes
+                        <ul>
+                            <li>jpg</li>
+                            <!-- Surgió a posteriori, tiene muy buen equilibrio entre calidad y peso. No tienen excesiva calidad, pero para la web son suficientes. Están comprimidas con un algoritmo -->
+                            <li>gif</li>
+                            <!-- Formato antiguo que guarda las imágenes con una paleta de colores bastante restringida. Gif puede tener transparencias y puede tener animaciones (estas dos últimas no las tiene jpeg) -->
+                            <li>png</li>
+                            <!-- Tiene dos variantes: el de 8 bits (es para pocos colores, porque solo puede guardar 256 colores, pero mejora al gif. Tiene una transparencia de canal alfa, que permite porcentajes en las transparencias) y el de 24 (como un jpeg, con mucha más calidad y con mucho más peso también) -->
+                            <li>(webp)</li>
+                            <!-- Formato nuevo que está promocionando Google y que es el que entiende Chrome. No es un estándar, pero lo soportan Firefox y Edge. -->
+                            <li>svg</li>
+                            <!-- nuevo formato vectorial que se incorpora en HTML5 que soportan todos los navegadores. Es un fichero de texto plano, principalmente utilizado para logos, evita que pixelen por tratarse de un formato vectorial que es estándar. -->
+                        </ul>
+                    </li>
+                    <li>Vídeo y Audio
+                        <!-- Todos estos formatos son formatos contenedores -->
+                        <ul>
+                            <li>mp4</li>
+                            <!-- utiliza para el vídeo el códec mpeg y para audio puede utilizar mp3 o ac3. Tiene la ventaja de que todos los navegadores a día de hoy lo utilizan. Es propietario de Apple. -->
+                            <li>ogg</li>
+                            <!-- Fue propuesto por Firefox Foundation y Opera, pero da menos calidad que mp4 -->
+                            <li>webm</li>
+                            <!-- está basado en el formato Matroska (mkv), da una calidad muy parecida a mp4, pero con la ventaja legal de que no es propiedad de nadie -->
+                        </ul>
+                    </li>
+                    <li>Elementos de navegación gráficos</li>
+                </ul>
+            </section>
+            <h3>Imágenes</h3>
+            <img src="./assets/SU47.jpg" alt="avión Sukhoi Su-47 sobrevolando Siberia">
+            <img src="./assets/su33.png" alt="perfil avión Sukhoi Su-33 Flanker con escarapela de la Federación Rusa">
+            <figure><img src="./assets/tropical-sunrise.webp" alt=""></figure>
+            <!-- Es un elemento de grouping que no crea nada pero semánticamente puede contener un elemento multimedia (imágenes o vídeos). Por defecto tienen un margin de 8px. Además de contener imágenes puede contener una etiqueta nueva que se llama fit caption. Es la única etiqueta aparte del elemento gráfico que se puede poner dentro de un figure. Vale para asociar un pie de foto a una imagen -->
+            <figcaption>Amanecer tropical</figcaption>
+            <!-- El atributo alt cuando esta etiqueta existe no es necesaria, pero no podemos quitar el atributo sino nos dará fallo al validar. Tendremos que dejarlo así: alt="" -->
+            <img src="./assets/logo.svg" alt="logotipo">
+            <!-- Si utilizamos el logo así, el sistema lo renderiza como una imagen. Lo trata exactamente igual que si fuese un png. -->
+            <h3>Vídeo y Audio</h3>
+            <p>Los vídeos pueden proceder de una fuente externa como Youtube</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_LxdMIJXGSs"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p>Los vídeos también pueden proceder de nuestro propio servidor</p>
+
+            <!-- <video src="./assets/Ghost_in_the_Shell_Opening.mp4"></video> -->
+            <video controls>
+                <source src="./assets/Ghost_in_the_Shell_Opening.webm" type="video/webm">
+                <!-- controls es un atributo Booleano en HTML5, con ponerlos da por hecho que son true y con no ponerlo interpreta que son false -->
+                <!-- Tiene una ventaja con respecto a Youtube y es que son responsive -->
+                <!-- Tiene apertura y cierre porque en lugar de usar src como atributo puede usar dentro la etiqueta source para la compatibilidad con Safari y con Mac -->
+                <source src="./assets/Ghost_in_the_Shell_Opening.mp4" type="video/mp4">
+            </video>
+            <p>También se pueden incluir audios</p>
+            <audio src="./assets/file_example_MP3_700KB.mp3" controls></audio> <!-- el aspecto visual de los controles de los vídeos y audios son propios de cada navegador, si quisiésemos cambiarlo, deberíamos quitar los controles nativos y programar unos nosotros mismos mediante JS -->
+            <h3>Elementos de navegación gráficos</h3>
+            <p>Los svg se pueden tratar como documentos en lugar de como imágenes</p>
+            <embed src="./assets/logo.svg" type="image/svg+xml">
+            <!-- Esto vale para embeber un documento dentro de otro. Normalmente va vinculado a un plugin que sepa trabajar con el documento -->
+            <!-- Es la segunda manera de tratar una imagen svg, como documento xml que abre html. -->
+            <!-- Sirve para crear documentos interactivos mediante JS y trata la imagen por partes, como si fuese un documento -->
+        </main>
+        <aside id="publicidad">
+            <p>Publicidad</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus laboriosam quibusdam, beatae
+                asperiores nihil voluptatem consectetur deleniti harum earum omnis cum ipsa commodi blanditiis veniam
+                provident exercitationem consequatur magni?</p>
+            <p>Ea quasi itaque, vitae omnis veritatis in officia perferendis iste quaerat, odio reprehenderit amet
+                animi. Repellat tempora aliquam a dolorum voluptas corporis, dolorem fugit reiciendis quas odit, aliquid
+                voluptatum blanditiis.</p>
+        </aside>
+    </div>
+
     <footer>
         <address>Aitor Gajardo - CIFE©</address>
     </footer>
