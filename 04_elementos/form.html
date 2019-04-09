@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aitor Gajardo">
+    <meta name="description" content="Ejercicios del curso Web FrontEnd">
+    <meta name="keywords" content="web, HTML, desarrollo front">
+    <!-- Tienen importancia, pero no trascendental, en los buscadores. Antes se les podía engañar, pero ahora a Google no se le puede engañar porque con sus algoritmos de SEO ve si coinciden las palabras clave con el resto de la página -->
+    <meta name="generator" content="Visual Studio Code">
+    <!-- Suele ser donde le indicamos el tipo de programa que hemos usado para generar nuestra web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Este es un formato de metadato que ya no se utiliza (el formato al que me refiero es http-equiv) -->
+    <title>Formulario - Curso</title>
+    <!-- Es requisito indispensable que cualquier documento HTML tenga title, porque si no, no nos validará la web -->
+    <!-- <style></style> puede ir aquí aunque no es recomendable -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        console.log('Hola Mundo')
+    </script> <!-- Esto nos sirve para escribir JS -->
+    <script src="./js/app.js"></script>
+    <!-- Una vez que un script tiene un src ignora lo que hay entre las etiquetas de apertura y de cierre -->
+</head>
+
+<body>
+    <header>
+        <!-- Nos permite definir mucho mejor la estructura de nuestra web -->
+        <h1>Elementos de HTML ☢️αβγ</h1> <!-- Se pintan bien porque usan UNICODE -->
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <!-- Esto hace que no haga nada y se quede donde estamos sin recargar la página -->
+                <li><a href="./index.html#bloques">En bloque</a></li>
+                <li><a href="./index.html#en_linea">En línea</a></li>
+                <li><a href="./mmedia.html">Multimedia</a></li>
+                <li><a href="#">Formulario</a></li>
+                <!-- La mejor manera de enlazar cuando se hacen páginas web son las referencias relativas al documento. Así, movamos a donde movamos nuestra web mientras mantengamos nuestra estructura de carpetas interna nos servirá. -->
+            </ul>
+        </nav>
+    </header>
+    <div class="content-wrapper">
+        <main>
+            <section id="form">
+                <header>
+                    <h2>Formulario</h2>
+                </header>
+                <p>Están disponibles los siguientes controles</p> <!-- un control es aquello que le permite al usuario controlar algo -->
+                <ul>
+                    <li>input-text</li>
+                    <li>textarea</li>
+                    <li>checkbox</li> <!-- Es un booleano, cuando se pulsa vale true cuando no, false -->
+                    <li>radiobuttons</li>
+                    <li>select options</li>
+                    <li>botones</li>
+                </ul>
+                <h3>Ejemplo de formulario</h3>
+                <form action="https://jsonplaceholder.typicode.com/users" method="POST"> <!-- al no poner nada en el atributo action, el formulario nos los enviamos a nosotros mismos -->
+                    <input type="text" name="name" id="nombre" placeholder="¿Cuál es tu nombre?"> <!-- esto funciona por pares clave-valor o nombre del elemento del input-input. Nunca se puede dejar vacío el atributo name porque si no, no nos va a salir la información. Es el único campo (name) que se decide conjuntamente entre el FrontEnd y el BackEnd -->
+                    <button type="submit">Enviar</button> <!-- los input type submit no se utilizan tanto para crear botones submit porque ya existe una nueva etiqueta en HTML5 que es esta de button -->
+                </form>
+                <!-- <form action=""></form> = <form action="" method="get"></form> -->
+            </section>
+
+        </main>
+        <aside id="publicidad">
+            <p>Publicidad</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus laboriosam quibusdam, beatae
+                asperiores nihil voluptatem consectetur deleniti harum earum omnis cum ipsa commodi blanditiis veniam
+                provident exercitationem consequatur magni?</p>
+            <p>Ea quasi itaque, vitae omnis veritatis in officia perferendis iste quaerat, odio reprehenderit amet
+                animi. Repellat tempora aliquam a dolorum voluptas corporis, dolorem fugit reiciendis quas odit, aliquid
+                voluptatum blanditiis.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <address>Aitor Gajardo - CIFE©</address>
+    </footer>
+</body>
+
+</html>
