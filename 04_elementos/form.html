@@ -56,8 +56,68 @@
                 </ul>
                 <h3>Ejemplo de formulario</h3>
                 <form action="https://jsonplaceholder.typicode.com/users" method="POST"> <!-- al no poner nada en el atributo action, el formulario nos los enviamos a nosotros mismos -->
-                    <input type="text" name="name" id="nombre" placeholder="¿Cuál es tu nombre?"> <!-- esto funciona por pares clave-valor o nombre del elemento del input-input. Nunca se puede dejar vacío el atributo name porque si no, no nos va a salir la información. Es el único campo (name) que se decide conjuntamente entre el FrontEnd y el BackEnd -->
-                    <button type="submit">Enviar</button> <!-- los input type submit no se utilizan tanto para crear botones submit porque ya existe una nueva etiqueta en HTML5 que es esta de button -->
+                <!--<ul>
+                        <li></li>
+                    </ul> -->
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <div>
+                            <label for="nombre">Nombre</label> <!-- el atributo for tiene que coincidir con el id del input al que hace referencia -->
+                            <input type="text" name="name" id="nombre" placeholder="¿Cuál es tu nombre?" required minlength="3"> <!-- esto funciona por pares clave-valor o nombre del elemento del input-input. Nunca se puede dejar vacío el atributo name porque si no, no nos va a salir la información. Es el único campo (name) que se decide conjuntamente entre el FrontEnd y el BackEnd --> 
+                        </div>
+                        <div>
+                            <label for="email">Correo</label>
+                            <input type="email" name="email" id="email" placeholder="Introduzca su email" required>  
+                        </div>
+                        <div>
+                            <label for="passwd">Contraseña</label>
+                            <input type="password" name="passwd" id="passwd" required maxlength="4">
+                        </div>
+                        <div>
+                            <label for="">Comentarios</label>
+                            <textarea name="comments" id="comments" cols="30" rows="5"></textarea> <!-- el concepto de cols y rows no se puede meter por CSS -->
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Condiciones</legend>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias ipsum obcaecati, qui a odit voluptatibus optio veniam libero minima, fugiat reprehenderit id? Soluta exercitationem vitae sint assumenda eveniet vel.</p>
+                        <div>
+                            <input type="checkbox" name="aceptado" id="aceptado" required> <!-- si no lo checamos no manda el dato -->
+                            <label for="aceptado">Estoy de acuerdo con las condiciones de uso y privacidad</label> <!-- por accesibilidad los label siempre tienen que tener el for bien puesto -->
+                        </div>
+                        <fieldset>
+                            <legend>Datos del curso</legend>
+                            <div>
+                                <label for="curso">Curso</label>
+                                <select name="curso" id="curso" required> <!-- Con el atributo multiple conseguimos que podamos seleccionar varias a la vez -->
+                                    <option value="">&nbsp;</option> <!-- el escape &nbsp crea un espacio duro, que es una manera de crear espacios, que es un poco chapuza para solucionar que no haya nada escrito, pero que en nuestro caso nos sirve para que el validador de HTML nos lo valide -->
+                                    <optgroup label="Front"> <!-- sirve para crear grupos dentro de las opciones -->
+                                        <option value="HTML">HTML</option> <!-- el atributo es opcional. Se pueden hacer 3 cosas: 1.no ponerlo. 2.poner un nombre que no tiene nada que ver. 3. -->
+                                        <option value="CSS">CSS</option>
+                                        <option value="JS">JavaScript</option>
+                                    </optgroup>
+                                    <optgroup label="Back">
+                                        <option value="JV">JV</option>
+                                        <option value="NodeJS">Node</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div>
+                                <p>Sede</p>
+                                <input type="radio" name="sede" id="madrid" value="MD" required> <!-- poniendo el mismo name hacemos un grupo de opciones radiobutton que sería el equivalente a la etiqueta select --> <!-- En este caso el required se aplica al resto de inputs que tienen como nombre name=sede -->
+                                <label for="madrid">Madrid</label>
+                                <input type="radio" name="sede" id="barcelona" value="BC">
+                                <label for="barcelona">Barcelona</label>
+                                <input type="radio" name="sede" id="cadiz" value="CD">
+                                <label for="cadiz">Cádiz</label>
+                            </div>
+                        </fieldset>
+                    </fieldset>
+                    <div>
+                        <button type="submit">Enviar</button> <!-- los input type submit no se utilizan tanto para crear botones submit porque ya existe una nueva etiqueta en HTML5 que es esta de button -->  
+                        <button type="reset">Reset</button>
+                    </div>
+                    <!-- Es preferible organizar los inputs mediante div antes que por párrafos o por listas -->
                 </form>
                 <!-- <form action=""></form> = <form action="" method="get"></form> -->
             </section>
