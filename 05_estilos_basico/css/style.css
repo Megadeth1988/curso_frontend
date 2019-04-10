@@ -1,0 +1,41 @@
+/* Selector de etiqueta y agrupados.
+Tiene la desventaja de que no es nada específico */
+
+h1, h2 {
+    color: crimson;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: aqua
+}
+
+/* Selectores de id.
+Buena práctica: los selectores de id no se usan. No se usan en CSS, se reservan para los desarrolladores de Java. No se usan en CSS para no tener conflictos de especificidad. */
+
+#p01 {
+    color: slateblue;
+}
+
+/* Selectores de clase. Pueden ser igual de específicas que los id o aplicarse a varios */
+
+.resaltado {
+    color:tomato; 
+}
+
+/* Selectores de atributo. Vale para cualquier atributo. Se suele utilizar con los name. */
+
+[name="nombre"] {
+    background-color: bisque;
+}
+
+[required] {
+    border-color: tomato;
+}
