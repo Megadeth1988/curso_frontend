@@ -1,0 +1,37 @@
+* {
+    /* box-sizing: content-box; */ /* cuando yo le digo un width a lo que yo estoy asignándole el ancho es al contenido del elemento. */
+    box-sizing: border-box; /* es el mayor avance de la última versión de CSS. Sistema de medidas que limita la propiedad width. Con esta mide del borde para adentro. Nos permite redistribuir el padding */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cuadrados p {
+    /* margin: 1rem; */
+    margin: calc(calc(100% - calc(15%*5)) / 10); /* si no se pone porcentaje en las operaciones  */
+    padding: 1rem;
+    border: 1px solid;
+    background-color: tomato;
+    /* display: inline-block; */ /* hace que no colapsen ninguno de los márgenes */
+    width: 15%;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.real {
+    margin: 2rem;
+}
+
+.real p {
+    float: left;
+    width: calc(100%/3);
+}
+
+.real p:not(:first-child) {
+    padding-left: 1rem;
+} /* Esto es lo más complicado que se puede programar en CSS, porque aglutina todos los tipos de clases, pseudo-clases, elementos y pseudo-elementos disponibles */
