@@ -1,0 +1,42 @@
+:root {
+    --x:17;
+    --y:9;
+    --color-fondo: rgb(161, 33, 33);
+    --color-letra: rgb(22, 243, 243);
+    --margen-base: 2rem;
+} /* Esta es una forma de introducir variables de JS en una hoja de estilos (CSS) */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    padding: 2rem;
+}
+
+/* Esto actúa como espacio de nombres. Es una manera de anidar */
+
+.main-header-h1 { 
+    margin: 0;
+    padding: 0;
+}
+
+.main-header-p {
+    margin-bottom: 0;
+    margin-top: calc(var(--margen-base)/10); /* Esto a día de hoy no se utiliza, pero tiene opciones de futuro */ 
+}
+
+.content-wrapper {
+    margin: var(--margen-base);
+}
+
+.main-footer {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
