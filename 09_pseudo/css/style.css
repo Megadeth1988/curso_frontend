@@ -1,0 +1,66 @@
+section p::first-letter {
+    font-size: 4rem;
+}
+
+aside p::first-line {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+section div p::before {
+    content: "Atención, importante: ";
+} /* Con la etiqueta after y before podemos incluir contenido por CSS. No le damos valor semántico a lo que se dice */
+
+/* section div p::before {
+    content: "⚠️Atención, importante: ";
+} De esta manera podemos utilizar los emoji como bullet*/
+
+/* Los pseudo-elementos que son propios de cada navegador son:
+moz es para mozilla
+o es para opera
+ms para microsoft
+webkit es para chrome y safari */
+
+/* Pseudo-clases va a servir como las clases, pero hace referencia al estado de un elemento */
+
+p:hover {
+    color: tomato;
+}
+
+a:visited {
+    color: chocolate;
+}
+
+/* Pseudo-clases que tienen que ver con las posiciones (aparecen en CSS3) */
+
+/* p:nth-child(1) {
+    color: blue;
+} */ /* Con esto le estamos marcando que todos los p que sean hijos de cualquier etiqueta y sean el primero (al margen de que sea el primer párrafo, los pintará de azul */
+
+/* section p:nth-child(1) {
+    color: blue;
+} */
+
+section p:nth-of-type(1) {
+    color: blue;
+} /* Con este ya no cuenta entre todos los hijos sino que busca los primeros hijos del tipo párrafo */
+
+/* Herencia:
+- la fuente SÍ se hereda
+- el borde no se hereda
+ */
+
+body /* * */ { 
+font-family: 'EB Garamond', serif;
+border: 1px solid; /* con esto le estamos poniendo borde a todo el body, pero no a body y a todos los hijos de body, porque la propiedad no se hereda */
+}
+
+header {
+    font-family: 'Pacifico', cursive;
+}
+
+* {
+    color: springgreen;
+}
+
+/* (*) Es el selector universal y nos sirve para seleccionar todos los selectores y se hereden o no las propiedades, las aplica a todos y cada uno de los elementos de HTML. */
