@@ -1,5 +1,9 @@
 /* ESTA ES LA MANERA MÁS COMPLICADA DE PONER UN MENÚ */
 
+*, *::after, *::before, *:after *:before {
+    box-sizing: border-box;
+} /* Esta sería la instrucción completa para los navegadores y se pone así porque los after y before nunca están incluidos estos. Se escribe de esas dos maneras porque son las maneras en las que nos podemos encontrar estos dos pseudo-elementos. */
+
 body {
     margin: 0;
     padding: 0;
@@ -28,7 +32,14 @@ body {
 
 .main-header p {
     margin-bottom: 0;
-    margin-top: 0,2rem;  
+    margin-top: 0,2rem;
+    /* display: none; */ /* Hace que se pierda el espacio reservado para la etiqueta a la que se le aplique */
+    visibility: hidden; /* No cambia el resto de los elementos porque respeta el espacio. */
+}
+
+.main-header:hover p {
+    /* display: initial; */
+    visibility: initial;
 }
 
 .main-menu {
@@ -60,18 +71,44 @@ body {
     /* text-decoration: none; */ /* Para quitar el subrayado de los links */
     display: block; /* Le damos block porque a un elemento inline no le podemos dar padding. */
     padding: 1rem; /* Con ello aumentamos la parte clicleable del link */
-    fit
 }
 
 .content-wrapper {
     margin: 2rem;
+} /* overflow: auto; Esta opción sirve para evitar que se solapen  */
+
+/* .contet-wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+} */ /* Alternativa mediante "after", que es en CSS el equivalente a un div para que nos haga la función clearfix */
+
+.main-content {
+    width: 70%;
+    float: left;
+    background-color: bisque;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
+
+.main-aside {
+    width: 30%;
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: darkcyan;
+}
+
+.clearfix {
+    clear: both;
+    margin-bottom: 2rem;
+} /* Con esto estamos rompiendo la cadena de flotación, porque no deja que flote nadie por la izquierda ni por la derecha */
 
 .main-footer {
     background-color: tomato;
     color: aqua;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.5rem;
     text-align: center;
 }
 
