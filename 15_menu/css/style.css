@@ -21,7 +21,7 @@ body {
 /* Esto actúa como espacio de nombres. Es una manera de anidar */
 
 .main-header div {
-    margin: 2rem;
+    margin: 1rem;
     position: relative;
 }
 
@@ -34,12 +34,23 @@ body {
     margin-bottom: 0;
     margin-top: 0,2rem;
     /* display: none; */ /* Hace que se pierda el espacio reservado para la etiqueta a la que se le aplique */
-    visibility: hidden; /* No cambia el resto de los elementos porque respeta el espacio. */
+    /* visibility: hidden; */ /* No cambia el resto de los elementos porque respeta el espacio. */
 }
 
-.main-header:hover p {
-    /* display: initial; */
+/* .main-header:hover p {
+    display: initial;
     visibility: initial;
+} */
+
+.menu ol, .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .main-menu {
@@ -51,19 +62,8 @@ body {
     right: 1rem;
 }
 
-.menu ol, .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
 .main-menu li {
     display: inline-block; /* Para que se dispongan en línea pero actúe como bloque */
-}
-
-.menu a {
-    color: inherit;
-    text-decoration: none;
 }
 
 .main-menu a {
@@ -74,7 +74,7 @@ body {
 }
 
 .content-wrapper {
-    margin: 2rem;
+    margin: 1rem;
 } /* overflow: auto; Esta opción sirve para evitar que se solapen  */
 
 /* .contet-wrapper:after {
@@ -84,7 +84,7 @@ body {
 } */ /* Alternativa mediante "after", que es en CSS el equivalente a un div para que nos haga la función clearfix */
 
 .main-content {
-    width: 70%;
+    width: 60%;
     float: left;
     background-color: bisque;
     padding-left: 1rem;
