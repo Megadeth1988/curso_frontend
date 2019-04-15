@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Front</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div> <!-- Hemos puesto este elemento porque necesitamos "enganchar" un elemento con margen y padding -->
+            <h1>Selectores de CSS</h1>
+            <p>Ejemplo realista de anidamiento</p>
+            <nav class="menu main-menu"> <!-- Utilizamos la combinación de dos clases para poder aplicarle unas características generales que engloben a los menús. -->                <ol>
+                    <li><a href="#seccion1">Sección 1</a></li>
+                    <li><a href="#seccion2">Sección 2</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <section id="seccion1">
+        <header>
+            <h1>Sección 1</h1>
+        </header> <!-- El concepto de elementos hermanos en inglés se llaman siblings -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quibusdam praesentium amet. Laborum ut fugiat pariatur placeat corporis incidunt modi, autem, eveniet tempora porro animi molestias mollitia minus vero inventore.</p>
+        <p>Recusandae ut animi cupiditate inventore dolore obcaecati itaque dolor architecto, ea nihil voluptatum eveniet iste quo odit corporis assumenda. Officiis autem, vitae ex rem quis nobis! Non sed accusantium nihil.</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea recusandae, neque, adipisci maxime quis tempore dolores, ut repellat ipsa dicta eligendi quam optio unde distinctio. A, mollitia possimus. Vero, non!</p>
+            <p>Ipsum iste consequuntur incidunt nihil magnam, porro minus, voluptates odit, cumque amet debitis quis temporibus sapiente praesentium neque similique perferendis? Quia sequi incidunt iure eveniet perferendis voluptas ex maiores consectetur.</p>
+        </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim debitis labore recusandae voluptatem omnis quas non corrupti doloremque laudantium. Totam fuga provident voluptate modi iure consequuntur delectus rerum nihil officia.</p> <!-- Al leerse el CSS de manera secuencial los párrafos que están por debajo de él son los hermanos, los que están antes, no -->
+            <p>Debitis nobis porro magni sapiente a impedit asperiores provident vero, quis quas aut laboriosam itaque repellendus expedita ut, minus eius. Consequuntur, odio? Cupiditate et quisquam, id nostrum ratione iure quia?</p>
+        </section>
+        <section id="seccion2">
+            <header>
+                <h2>Sección 2</h2>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione ab aliquid alias modi. Magnam harum quod dolores! Corrupti, expedita. Unde sunt, amet inventore voluptatibus consequatur fugit ipsam perspiciatis harum tempora?</p>
+            <p>Minima a ducimus modi aut quibusdam totam laborum, consectetur porro odio? Et, sint cumque eum tempore fugiat excepturi cum tenetur in sequi quis rerum eveniet, vel quod veritatis, quasi nihil.</p>
+            <p>Sed vero quo temporibus commodi mollitia vitae harum praesentium atque error officia voluptas provident accusamus eveniet repellendus reprehenderit dolore, animi aspernatur voluptatum. Corporis at vel adipisci natus debitis nostrum distinctio!</p>
+            <p>Minus magni sit laudantium iusto error, consectetur fugiat dolor dolores eius quas suscipit tempore porro cumque ut cupiditate omnis soluta, non deserunt culpa labore id vel repudiandae impedit earum! Neque?</p>
+            <p>Accusantium voluptatum delectus esse cum ex tempore illum, nam consectetur tempora rem atque numquam quam provident odit pariatur omnis doloremque veritatis laborum dignissimos quas laudantium architecto obcaecati repellendus est? Nisi.</p>
+            <p>Ipsam quia repudiandae veritatis laborum assumenda facere. Quis eos nihil eveniet commodi cupiditate odio veritatis sed, sit eligendi laboriosam doloribus molestias maiores facere iure, quidem dignissimos et, ducimus itaque nam?</p>
+        </section>
+        <aside>
+        <header>
+            <h2>Más información</h2>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis adipisci quam assumenda harum nulla laboriosam ipsa cumque esse quibusdam, sequi non molestias ipsum praesentium. Laboriosam expedita ea fuga ex labore.</p>
+        <p>Sint nisi pariatur quis assumenda nostrum! Qui unde ipsam vitae libero quaerat omnis minus! Pariatur accusamus officiis autem praesentium enim odit? Magnam ipsa nobis sapiente temporibus ducimus illum nulla incidunt!</p>
+        <footer>
+            <p>&copy;CIFE</p>
+        </footer>
+        </aside>
+    </div>
+    <footer class="main-footer">
+        <address>Aitor G.M.&copy; - CIFE</address>
+        <aside class="menu social-menu"> <!-- Utilizamos la combinación de dos clases para poder aplicarle unas características generales que engloben a los menús. -->
+            <ul>
+                <li><a href="#" title="Facebook"><i class="fab fa-facebook-square"></i></a></li> <!-- El <i> en este caso sólo sirve de enganche para el atributo class, no para nada más. -->
+                <li><a href="#" title="Twitter"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#" title="Github"><i class="fab fa-github-alt"></i></a></li>
+            </ul>
+        </aside>
+    </footer>
+</body>
+</html>
