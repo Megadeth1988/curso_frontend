@@ -1,0 +1,28 @@
+section {
+    position: relative; /* Hace de referencia para los elementos absoluto. */
+}
+
+/* Los posicionamientos NO SON LO ADECUADO PARA CONSTRUIR UN LAYOUT */
+
+section p {
+    padding: 1rem;
+    background-color: crimson;
+}
+
+/* Con el posicionamiento relativo hemos creado una "capa" aparte que nos va a servir para mover los párrafos.
+Los elementos cuando se mueven por posicionamiento relativo, dejan memoria del espacio que ocupaba. Las coordenadas son relavitas a su posición inicial*/
+
+.relativo {
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+}
+
+/* Los posicionamientos absolutos hacen que el resto de los elementos se reajusten, porque al no conservarse ese espacio, todo ocupa el lugar.
+El origen de coordenadas es el primer elemento en la cadena de ascendientes que encuentre con un posicionamiento distinto del estático, si no encuentra ninguno sería <body> */
+
+.absolut {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+}
