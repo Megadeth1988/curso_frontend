@@ -1,0 +1,44 @@
+img {
+    width: fit-content;
+    max-width: 100%;
+} /* Esta es una manera de hacer responsive las imágenes. Si la imagen no puede alcanzar el máximo (100%) no le obliga a agrandarse y por lo tanto no pixela imágenes pequeñas; y a las imágenes que son más grandes de la medida no crecen más allá del 100% del elemento padre. */
+
+.image-wrapper-75 {
+    width: 75%;
+}
+
+.image-wrapper-50 {
+    width: 50%;
+    /* float: left;
+    margin-right: 1rem; */
+    float: right;
+    margin-left: 1rem;
+}
+
+.image-wrapper-25 {
+    width: 25%;
+}
+
+.clearfix {
+    border-top: 1px solid grey;
+    clear: both;
+}
+
+.fondos {
+    height: 100vh; /* Porque quiero que sea la pantalla completa. */
+    background-color: #4595E0;
+    background-image: url("../assets/3boats.jpg"); /* Siempre que se aplica un fondo, por motivos de seguridad se debe aplicar un color de fondo antes por si acaso la imagen no carga, que no llegue a verse. */
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    /* background-size: contain; */ /* Conserva el ratio de imagen pero no cubre toda el área. */
+    background-size: cover; /* Cubre todo el espacio que tiene disponible, pero respetando el ratio real de la imagen. */
+    background-blend-mode: luminosity; /* Permite que si hemos decidido una capa de color y una mezcla de image se mezclen. Es una etiqueta nueva, no está soportada por todos los navegadores. Da para bastantes efectos */
+}
+
+.fondos h2 {
+    text-align: center;
+    padding-top: 25vh;
+    /* color: #f8261d; */
+    color: aliceblue;
+    /* line-height: 100vh; */ /* Esto lo que hace es marcar la altura de la línea y le estamos diciendo que la altura de la línea es la del fondo */
+}
