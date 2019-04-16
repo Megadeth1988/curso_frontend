@@ -1,0 +1,137 @@
+/* ESTA ES LA MANERA MÁS COMPLICADA DE PONER UN MENÚ */
+
+*, *::after, *::before, *:after *:before {
+    box-sizing: border-box;
+} /* Esta sería la instrucción completa para los navegadores y se pone así porque los after y before nunca están incluidos estos. Se escribe de esas dos maneras porque son las maneras en las que nos podemos encontrar estos dos pseudo-elementos. */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+
+.main-header {
+    background-color: tomato;
+    color: aqua;
+    padding: 2rem;
+    font-family: 'Quicksand', sans-serif;
+    /* position: relative; */ /* lo ponemos para que actúe como origen de las coordenadas que vamos a dar */
+}
+
+/* Esto actúa como espacio de nombres. Es una manera de anidar */
+
+.main-header div {
+    margin: 1rem;
+    position: relative;
+}
+
+.main-header h1 { 
+    margin: 0;
+    padding: 0;
+}
+
+.main-header p {
+    margin-bottom: 0;
+    margin-top: 0,2rem;
+    /* display: none; */ /* Hace que se pierda el espacio reservado para la etiqueta a la que se le aplique */
+    /* visibility: hidden; */ /* No cambia el resto de los elementos porque respeta el espacio. */
+}
+
+/* .main-header:hover p {
+    display: initial;
+    visibility: initial;
+} */
+
+.menu ol, .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.main-menu {
+    border: 1px solid;
+    border-radius: 5px;
+    width: fit-content;
+    position: absolute;
+    top: 2px;
+    right: 1rem;
+}
+
+.main-menu li {
+    display: inline-block; /* Para que se dispongan en línea pero actúe como bloque */
+}
+
+.main-menu a {
+    /* color: inherit; */ /* Hereda el color del elemento padre, sea el que sea. */
+    /* text-decoration: none; */ /* Para quitar el subrayado de los links */
+    display: block; /* Le damos block porque a un elemento inline no le podemos dar padding. */
+    padding: 1rem; /* Con ello aumentamos la parte clicleable del link */
+}
+
+/* Layout con display table */
+
+.content-wrapper {
+    margin: 1rem;
+    display: table;
+}
+
+.main-content {
+    display: table-cell;
+    width: 60%;
+    background-color: bisque;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.main-aside {
+    display: table-cell;
+    width: 30%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: darkcyan;
+}
+
+/* CSS de la tabla */
+
+table {
+    width: 100%;
+    empty-cells: hide;
+    border-collapse: collapse;
+}
+
+table:hover {
+    border-collapse: separate;
+}
+
+td, th {
+    border: 1px solid yellow;
+}
+
+td {
+    text-align: center;
+}
+
+/* CSS del footer */
+
+.main-footer {
+    background-color: tomato;
+    color: aqua;
+    padding-top: 1.2rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.social-menu {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.social-menu li {
+    display: inline;
+}
