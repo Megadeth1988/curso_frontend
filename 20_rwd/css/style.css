@@ -4,6 +4,8 @@
     box-sizing: border-box;
 } /* Esta sería la instrucción completa para los navegadores y se pone así porque los after y before nunca están incluidos estos. Se escribe de esas dos maneras porque son las maneras en las que nos podemos encontrar estos dos pseudo-elementos. */
 
+
+/* Reseteo de los valores del body y fuente general */
 body {
     margin: 0;
     padding: 0;
@@ -22,7 +24,7 @@ body {
 }
 
 /* Esto actúa como espacio de nombres. Es una manera de anidar */
-
+/* Reseteo de los valores de h1 */
 .main-header h1 { 
     margin: 0;
     padding: 0;
@@ -40,6 +42,7 @@ body {
     visibility: initial;
 } */
 
+/* Reseteo de valores genéricos de cualquier menú */
 .menu ol, .menu ul {
     list-style: none;
     margin: 0;
@@ -51,6 +54,7 @@ body {
     text-decoration: none;
 }
 
+/* Menú principal */
 .main-menu {
     border: 1px solid;
     border-radius: 5px;
@@ -74,8 +78,7 @@ body {
     display: flex;
 } */
 
-/*  */
-
+/* Secciones principales */
 .main-content {
     /* width: 70%; */
     /* Atajo para flex-grow, flex-shrink, flex basis */
@@ -84,7 +87,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1rem;
-    padding: 0.3rem;
+    padding-bottom: 0.3rem;
 }
 
 .main-aside {
@@ -135,4 +138,38 @@ td {
 
 .social-menu li {
     display: inline;
+}
+
+/* De aquí para arriba, sería la 1ª Media Query */
+
+@media screen and (min-device-width: 640px) {
+    .main-header {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}  /* Esto sería RESPONSIVE. La propiedad device es para que detecte los dispositivos móviles, pero aunque el PC tenga el tamaño min no lo va a detectar y va a quedar mal. La norma global sería min-width, pero como el diseño para pantallas pequeñas es para dispositivos móviles, pondremos normalmente min-device-width. */
+
+@media screen and (min-device-width: 920px) {
+    .main-header {
+        padding: 2rem;
+    }
+
+    .content-wrapper {
+        margin: 2rem;
+        display: flex;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+
+    .main-aside {
+        width: 30%;
+    }
+
+    .main-footer {
+        padding-top: 1.2rem;
+        padding-bottom: 1.5rem;
+    }
 }
