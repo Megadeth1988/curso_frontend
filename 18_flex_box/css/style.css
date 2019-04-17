@@ -1,0 +1,27 @@
+section.flex {
+    display: flex;
+    border: 1px double yellowgreen;
+    flex-direction: row; /* con esto se cambia el eje principal sobre el que actúa. Por defecto la propiedad es row. */
+    height: 60vh;
+    flex-wrap: wrap; /* Ajustarse a las líneas. */
+    /* Alineación en el eje principal */
+    justify-content: center;
+    /* Alineación en el eje secundario */
+    align-items: flex-start; /* Por defecto vale stretch */
+    /* Alineación entre filas (agrupaciones en el eje principal */
+    align-content: flex-end;
+} /* Los hijos de un flex, heredan sus condiciones flexibles. Los elementos flexibles tienen por defecto el ancho de su contenido y se colocan uno al lado del otro mientras quepan. Internamente es donde se produce la flexibilidad, externamente sigue ocupando lo mismo.
+La columna más alta es la que marca la altura del resto de los elementos*/
+
+p.item {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: coral;
+    border: 1px solid;
+}
+
+p.item:nth-child(4) {
+    padding: 2rem 1rem;
+    font-size: 3rem;
+    order: -1;
+}
