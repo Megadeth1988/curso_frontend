@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Front - JS</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        console.log('Hola desde el script')
+
+        //Función manejadora de eventos (Event Handler) Esto es un comentario en línea y vale para JS
+        function saludar () {
+            console.log('Hola desde una función')
+        } // A esto se le conoce como una función manejadora de eventos o Event Handler en inglés */ /* saludarEsDivertido -> Esto se llama CamelCase y la primera es con minúscula. Es una buena práctica
+    </script>
+    <script src="./js/app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Hola mundo con JS</h1>
+    </header>
+    <section>
+        <div class="item-flex"> <!-- Metemos el contenido en un div para que el section al que le aplicamos flex sea heredado por el div. La propiedad flex hay que aplicarla al padre de los elementos que queramos que tengan esta propiedad. -->
+            <h2>Ejemplo de JS in-line</h2>
+            <button type="button" title="Aparecerá la respuesta en la consola" onclick="console.log('Hola')">Saludar</button>
+            <button type="button" onclick="saludar()">Saludar2</button>
+            <button type="button" onclick="despedirse()">Despedirse</button>
+        </div>
+    </section>
+    <footer>
+        <address>Aitor G.M.</address>
+    </footer>
+</body>
+</html>
