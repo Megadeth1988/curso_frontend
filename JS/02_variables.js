@@ -7,6 +7,15 @@ let edad = 34 //Declarar e inicializar
 
 // Tipos de datos
 
+/* 
+En otros lenguajes hay declaración EXPLICITA y OBLIGATORIA de tipos
+int x -> variable x de tipo entero sin valor. Cuando tipos explícitos suele haber más tipos.
+
+En JS los tipos son:
+    - débiles: no se declaran explícitamente. Son IMPLÍCITOS al valor.
+    - dinámicos: pueden cambiar. 
+*/
+
 // undefined. Son las variables que no tienen valor.
 let data
 console.log(data)

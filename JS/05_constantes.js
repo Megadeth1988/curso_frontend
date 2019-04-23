@@ -21,6 +21,9 @@ const user = {
 user.altura = 179
 user.name = 'Carlos'
 
+// user.edad = 26 daría un error
+// user = {} daría un error porque estaríamos reinicializando la variable y al ser una constante no se puede.
+
 console.log (user)
 console.log (user.name)
 console.log (user.edad)
