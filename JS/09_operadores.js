@@ -71,3 +71,12 @@ let mensajes = [
 ]
 
 console.log(mensajes[i])
+
+// && - AND (Sí)
+// || - OR
+// ! - NOT
+
+let x = 23 // Por defecto, cualquier variable en Boolean es True
+// !x convierte en Boolean pero en False
+// El !!x se utiliza para convertir algo en Boolean
+// Poner paréntesis establece prioridades a la hora de evaluar. 
