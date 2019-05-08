@@ -1,4 +1,4 @@
-vuelo1 = {
+let vuelo1 = {
     airline: 'Oceanic',
     number: '815', // a la hora de guardarlo es mejor que los numeros que no son aritméticos se guarden en forma de string
     departure: {
