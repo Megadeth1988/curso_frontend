@@ -1,6 +1,6 @@
 let vuelo1 = {
     airline: 'Oceanic',
-    number: '815', // a la hora de guardarlo es mejor que los numeros que no son aritméticos se guarden en forma de string
+    number: '815',
     departure: {
         IATA: 'SYD',
         time: '2004-09-22 14:55',
