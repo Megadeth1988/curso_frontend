@@ -2,16 +2,24 @@
  * Rehacemos el ejercicio empleando una función constructora
  */
 
+class Item  { 
+    constructor (descripcion, precio, cantidad) {
+        this.descripcion = descripcion
+        this.precio = precio
+        this.cantidad = cantidad
+    }
+}
+
 class Factura {
-    constructor (cliente, tipoIVA, formaPago) {
-        // this.empresa = new Empresa('Ediciones Boracay', 'c/ Pez', '916587686', 'B-64539874')
+    constructor  (cliente, tipoIVA, formaPago) {
+        // this.empresa = new Empresa('Ediciones Boracay', 'c/ Pez','916583764', 'B-64539874')
         this.cliente = cliente
         this.items = []
         this.tipoIVA = tipoIVA
         this.formaPago = formaPago
     }
     get empresa() {
-        return new Empresa('Ediciones Boracay', 'c/ Pez', '916587686', 'B-64539874')
+        return new Empresa('Ediciones Boracay', 'c/ Pez','916583764', 'B-64539874')
     }
     addItem (item = new Item()) {
         this.items.push(item)
@@ -21,10 +29,11 @@ class Factura {
         return this.items.map(item => item.precio * item.cantidad).reduce((a,b) => a+b)*iva 
     }
     muestraImporte () {
-        let msg = 'El importe total es' + this.calculaImporte().toFixed(2) + '€'
+        let msg = 'El importe total (IVA incluido) es ' + this.calculaImporte().toFixed(2) + ' €'
         console.log(msg)
     }
 }
+
 
 class Empresa {
     constructor (nombre, direccion, telefono, NIF) {
@@ -32,14 +41,6 @@ class Empresa {
         this.direccion = direccion
         this.telefono = telefono
         this.NIF = NIF
-    }
-}
-
-class Item {
-    constructor (descripcion, precio, cantidad) {
-        this.descripcion = descripcion
-        this.precio = precio
-        this.cantidad = cantidad
     }
 }
 
