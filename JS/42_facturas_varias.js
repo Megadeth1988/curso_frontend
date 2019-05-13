@@ -10,14 +10,14 @@ function Factura (empresa, cliente, items, tipoIVA, formaPago) {
     this.formaPago = formaPago
 }
 
-Factura.prototype.calculaImporte = function () {
+Factura.prototype.calculaImporte = function() {
     let iva = this.tipoIVA < 1 ? 1 + this.tipoIVA : this.tipoIVA
-    return this.items.map(item => item.precio * item.cantidad).reduce((a,b) => a+b)*iva
+    return this.items.map(item => item.precio * item.cantidad).reduce((a,b) => a+b)*iva 
 }
 
 Factura.prototype.muestraImporte = function () {
-    let msg = 'El importe total es' + this.importeTotal.toFixed(2) + '€'
-    console.log(msg)
+        let msg = 'El importe total (IVA incluido) es ' + this.calculaImporte().toFixed(2) + ' €'
+        console.log(msg)
 }
 
 function Empresa (nombre, direccion, telefono, NIF) {
