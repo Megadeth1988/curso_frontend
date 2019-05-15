@@ -1,0 +1,23 @@
+section {
+    display: flex;
+    min-height: 80vh;
+    /* Alineación en el eje ppal.: por defecto flex-start */
+    justify-content: center;
+    /* Alineación en el eje secundario: por defecto stretch */
+    align-items: center;
+}
+
+.item-flex {
+    background-color: rgba(250, 128, 114, 0.3);
+    text-align: center;
+    padding: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.boton {
+    cursor: pointer;
+    background-color: gainsboro;
+}
