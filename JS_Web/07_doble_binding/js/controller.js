@@ -22,6 +22,7 @@ export function controller () {
     }
 
     function borrar() {
-
+        inNombre.value = ''
+        onInputNombre() // Ponemos esto porque así se ejecuta esta función que actualiza el contenido 
     }
 }
