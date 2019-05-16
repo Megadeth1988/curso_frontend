@@ -5,12 +5,16 @@ export function controller() {
     /** Nodos del DOM */
     const btnPedir = document.querySelector('#btn-pedir')
     const btnSaludar = document.querySelector('#btn-saludar')
+    const btnSaludar17 = document.querySelector('#btn-saludar-17')
+    const btnUsers = document.querySelector('#btn-users')
     const output = document.querySelector('#output')
     
     /** Manejadores de eventos */
 
     btnPedir.addEventListener('click', onPedir)
     btnSaludar.addEventListener('click', onSaludar)
+    btnUsers.addEventListener('click', onUsers)
+    btnSaludar17.addEventListener('click', onSaludarAwait)
 
     let aDatos = [1,2,3,4,5]
     aDatos.map( (item, i, array) => item * i) // La i es la posición en el array
@@ -79,7 +83,7 @@ export function controller() {
         msgAfterTimeout( 'Juanito', 'Pepito', 3500)
         .then( (datos) => {
             let saludo = (`¡Hola ${datos[1]}!`)
-            let quienSoy = datos[0].toUpperCase()
+            let quienSoy = datos[0].toLowerCase()
             console.log(saludo)
             return msgAfterTimeout(quienSoy, saludo, 500)
         }).then( (datos) => {
@@ -100,5 +104,28 @@ export function controller() {
             console.log(`${saludo}, soy ${quienSoy}`)
         })
     } */
+
+    /**
+     * En ES2017 aparece async / await
+     */
+
+
+    async function onSaludarAwait () {
+        let datos = []
+        datos = await msgAfterTimeout( 'Juanito', 'Pepito', 3500)
+        let saludo = (`¡Hola ${datos[1]}!`)
+        let quienSoy = datos[0].toUpperCase()
+        console.log(saludo)
+        datos = await msgAfterTimeout(quienSoy, saludo, 500)
+        console.log(`${datos[1]}, soy ${datos[0]}`)
+    } // Esta es una forma aparentemente más lineal de escribir la asincronía
+
+
+    function onUsers() {
+        const url = 'https://jsonplaceholder.typicode.com/users' // Para que me dé la lista de los usuarios al pulsar el botón
+        fetch(url)
+        .then( (response) => { return response.json()})
+        .then( (data) => { console.dir(data) }) 
+    }
 
 }
